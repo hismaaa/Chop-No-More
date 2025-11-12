@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= PlayerStatsManager.Instance.shootTime)
+        if (Time.time >= PlayerStatsManager.Instance.shootTime)
         {
             Shoot();
             PlayerStatsManager.Instance.shootTime = Time.time + PlayerStatsManager.Instance.shootCooldown;
@@ -21,8 +21,8 @@ public class Shooting : MonoBehaviour
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
         Vector3 targetPoint;
+
         if (Physics.Raycast(ray, out hit, 100f))
             targetPoint = hit.point;
         else
