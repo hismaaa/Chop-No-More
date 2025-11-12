@@ -20,19 +20,6 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    void AimAtCursor()
-    {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 100f))
-        {
-            Vector3 lookPos = hit.point;
-            lookPos.y = transform.position.y; // keep rotation flat
-            transform.LookAt(lookPos);
-        }
-    }
-
     void Shoot()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -46,7 +33,7 @@ public class Shooting : MonoBehaviour
 
         // Flatten the target Y to keep bullet roughly horizontal
         Vector3 direction = (targetPoint - shootPoint.position).normalized;
-        direction.y = 0; 
+        direction.y = 0;
 
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.LookRotation(direction));
         Physics.IgnoreCollision(bullet.GetComponent<Collider>(), GetComponent<Collider>());
