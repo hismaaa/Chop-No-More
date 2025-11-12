@@ -932,7 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 330585545}
-  bulletPrefab: {fileID: 6826240937183527154, guid: c9d1903120a33c743aeed13c00b909ca,
+  bulletPrefab: {fileID: 4686501316256252288, guid: beeccd905e2638b42908324bd6cb7c8f,
     type: 3}
   shootPoint: {fileID: 354955133}
   shootForce: 20
