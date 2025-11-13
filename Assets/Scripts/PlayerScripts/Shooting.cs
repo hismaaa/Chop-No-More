@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= PlayerStatsManager.Instance.shootTime)
+        if (Time.time >= PlayerStatsManager.Instance.shootTime)
         {
             Shoot();
             PlayerStatsManager.Instance.shootTime = Time.time + PlayerStatsManager.Instance.shootCooldown;
