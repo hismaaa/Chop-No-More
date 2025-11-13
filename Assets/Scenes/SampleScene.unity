@@ -1088,6 +1088,24 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1167337072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167337065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a2623be05fad84b9adf623ccccd9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 330585545}
+  bulletPrefab: {fileID: 4686501316256252288, guid: beeccd905e2638b42908324bd6cb7c8f,
+    type: 3}
+  shootPoint: {fileID: 354955133}
+  shootForce: 20
+  shootCooldown: 0.5
 --- !u!1 &1178544352
 GameObject:
   m_ObjectHideFlags: 0
